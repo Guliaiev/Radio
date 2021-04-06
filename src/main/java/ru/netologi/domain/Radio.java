@@ -27,7 +27,6 @@ public class Radio {
         this.currentNumber = currentNumber;
     }
 
-
     public int nextRadioNumber() {
         currentNumber = currentNumber >= maxCurrentNumber ? minCurrentNumber : ++currentNumber;
         return currentNumber;
