@@ -73,26 +73,30 @@ class RadioTest {
         radio.decreaseCurrentVolume();
         assertEquals(49, radio.getCurrentVolume());
     }
-@Test
-    void minCurrentVolume(){
+
+    @Test
+    void minCurrentVolume() {
         radio.setCurrentVolume(-1);
         assertEquals(0, radio.getCurrentVolume());
-}
-@Test
-    void maxCurrentVolume(){
+    }
+
+    @Test
+    void maxCurrentVolume() {
         radio.setCurrentVolume(120);
         assertEquals(100, radio.getCurrentVolume());
-}
-@Test
-    void increaseMaxCurrentVolume(){
+    }
+
+    @Test
+    void increaseMaxCurrentVolume() {
         radio.setCurrentVolume(100);
         radio.increaseCurrentVolume();
         assertEquals(100, radio.getCurrentVolume());
-}
-@Test
-    void decreaseMinCurrentVolume(){
+    }
+
+    @Test
+    void decreaseMinCurrentVolume() {
         radio.setCurrentVolume(0);
         radio.decreaseCurrentVolume();
         assertEquals(0, radio.getCurrentVolume());
-}
+    }
 }
