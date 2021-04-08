@@ -1,8 +1,11 @@
 package ru.netologi.domain;
 
 import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
-
+@NoArgsConstructor
+@Data
 @AllArgsConstructor
 public class Radio {
 
@@ -14,13 +17,21 @@ public class Radio {
     private int maxCurrentVolume = 100;
     private int minCurrentVolume = 0;
 
-    //public Radio() {
+    public void setMaxCurrentNumber(int maxCurrentNumber) {
+        this.maxCurrentNumber = maxCurrentNumber;
+    }
 
-    // }
+    public void setMinCurrentNumber(int minCurrentNumber) {
+        this.minCurrentNumber = minCurrentNumber;
+    }
 
-    //  public Radio(int maxCurrentNumber) {
-    //     this.maxCurrentNumber = maxCurrentNumber;
-    //  }
+    public void setMaxCurrentVolume(int maxCurrentVolume) {
+        this.maxCurrentVolume = maxCurrentVolume;
+    }
+
+    public void setMinCurrentVolume(int minCurrentVolume) {
+        this.minCurrentVolume = minCurrentVolume;
+    }
 
     public void increaseCurrentNumber() {
         if (currentNumber >= maxCurrentNumber) {
