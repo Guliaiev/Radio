@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class RadioTest {
-    Radio radio = new Radio();
+    Radio radio = new Radio(5, 10, 0, 5, 100, 0);
 
     @Test
     void shouldUseMaxStationConstructor() {
@@ -14,6 +14,7 @@ class RadioTest {
 
     @Test
     void shouldUseNoArgsConstructor() {
+        Radio radio = new Radio(5, 10, 0, 5, 100, 0);
         assertEquals(10, radio.getMaxCurrentNumber());
         assertEquals(0, radio.getMinCurrentNumber());
         assertEquals(5, radio.getCurrentNumber());

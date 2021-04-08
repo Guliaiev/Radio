@@ -1,9 +1,8 @@
 package ru.netologi.domain;
 
 import lombok.AllArgsConstructor;
-import lombok.Data;
 
-@Data
+
 @AllArgsConstructor
 public class Radio {
 
@@ -11,18 +10,17 @@ public class Radio {
     private int currentNumber = 5;
     private int maxCurrentNumber = 10;
     private int minCurrentNumber = 0;
-
     private int currentVolume = 5;
     private int maxCurrentVolume = 100;
     private int minCurrentVolume = 0;
 
-    public Radio() {
+    //public Radio() {
 
-    }
+    // }
 
-    public Radio(int maxCurrentNumber) {
-        this.maxCurrentNumber = maxCurrentNumber;
-    }
+    //  public Radio(int maxCurrentNumber) {
+    //     this.maxCurrentNumber = maxCurrentNumber;
+    //  }
 
     public void increaseCurrentNumber() {
         if (currentNumber >= maxCurrentNumber) {
@@ -58,17 +56,11 @@ public class Radio {
         return maxCurrentVolume;
     }
 
-    public void setMaxCurrentVolume(int maxCurrentVolume) {
-        this.maxCurrentVolume = maxCurrentVolume;
-    }
 
     public int getMinCurrentVolume() {
         return minCurrentVolume;
     }
 
-    public void setMinCurrentVolume(int minCurrentVolume) {
-        this.minCurrentVolume = minCurrentVolume;
-    }
 
     public int getCurrentNumber() {
         return currentNumber;
@@ -90,16 +82,8 @@ public class Radio {
         return minCurrentNumber;
     }
 
-    public void setMinCurrentNumber(int minCurrentNumber) {
-        this.minCurrentNumber = minCurrentNumber;
-    }
-
     public int getMaxCurrentNumber() {
         return maxCurrentNumber;
-    }
-
-    public void setMaxCurrentNumber(int maxCurrentNumber) {
-        this.maxCurrentNumber = maxCurrentNumber;
     }
 
     public int getCurrentVolume() {
@@ -117,7 +101,6 @@ public class Radio {
         }
         this.currentVolume = currentVolume;
     }
-
 }
 
 
